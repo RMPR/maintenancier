@@ -1,0 +1,22 @@
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+.question {
+    -fx-border-radius: 0px 10px 10px 10px;
+    -fx-alignment: center;
+    -fx-border-color:  orange;
+    -fx-wrap-text: true;
+    -fx-padding: 5px;
+    -fx-margin: 10px;
+}
+
+.response {
+     -fx-border-radius: 10px 10px 0px 10px;
+     -fx-alignment: center;
+     -fx-border-color:  #0678dd;
+     -fx-wrap-text: true;
+     -fx-padding: 5px;
+    -fx-margin: 10px;
+ }
+

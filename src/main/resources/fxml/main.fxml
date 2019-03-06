@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: lightgrey;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sma.main.controllers.MainController">
+   <children>
+      <Line endX="796.0" fill="#311575" layoutX="202.0" layoutY="37.0" startX="-201.0" />
+      <ImageView fx:id="close" fitHeight="35.0" fitWidth="38.0" layoutX="948.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/CloseWindow_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="911.0" layoutY="3.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MaximizeWindow_48px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="minimize" fitHeight="35.0" fitWidth="38.0" layoutX="875.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MinimizeWindow_48px.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="6.0" prefHeight="30.0" prefWidth="237.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Maintenance_40px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="31.0" layoutY="1.0" prefHeight="30.0" prefWidth="206.0" style="-fx-border-color: none;" text="Le Maintenancier">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="47.0" prefHeight="72.0" prefWidth="224.0" style="-fx-background-color: orange; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="54.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AdministrativeTools_48px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="26.0" prefHeight="21.0" prefWidth="114.0" style="-fx-border-color: none;" text="Maintenancier" />
+         </children>
+      </Pane>
+      <Pane layoutX="766.0" layoutY="693.0" prefHeight="72.0" prefWidth="218.0" style="-fx-background-color: #0678dd; -fx-background-radius: 10;">
+         <children>
+            <JFXButton fx:id="yes" buttonType="RAISED" layoutX="42.0" layoutY="21.0" onAction="#yesAction" ripplerFill="#02ff13" text="Oui" />
+            <JFXButton fx:id="no" buttonType="RAISED" layoutX="123.0" layoutY="21.0" onAction="#noAction" ripplerFill="#ff3000" text="Non" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="clearChat" buttonType="RAISED" layoutX="810.0" layoutY="88.0" onAction="#clear" ripplerFill="#ff0404" text="Clear Chat" textFill="#f50505" />
+      <ScrollPane fx:id="container" layoutX="255.0" layoutY="38.0" prefHeight="749.0" prefWidth="496.0">
+        <content>
+          <AnchorPane fx:id="chatBox" minHeight="0.0" minWidth="0.0" prefHeight="738.0" prefWidth="482.0" />
+        </content>
+      </ScrollPane>
+      <Line endX="830.0" endY="100.0" layoutX="38.0" layoutY="312.0" opacity="0.19" rotate="90.0" startX="100.0" startY="100.0" stroke="#cd7676" strokeWidth="10.0" />
+      <TextField fx:id="text" layoutX="39.0" layoutY="662.0" promptText="Enter a question" />
+   </children>
+</AnchorPane>
