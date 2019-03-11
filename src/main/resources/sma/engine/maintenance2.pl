@@ -36,9 +36,8 @@ boutondallumage :- not(verify("s'allume")).
 
 /*Comment poser les questions*/
 ask(Question) :- term_to_atom(Question, Q),
-		   jpl_call('sma.engine.Engine', handle, [Q], _),
-           jpl_get('java.lang.System', 'in', In),
-           jpl_call('sma.engine.Engine', readT, [], K),
+		   jpl_call('sma.engine.Engine', print, [Q], _),
+		   jpl_call('sma.engine.Engine', scan, [], K ),
            (  (K==oui ; K==o)
              ->  assert(oui(Question));
 			 (K==cancel)
