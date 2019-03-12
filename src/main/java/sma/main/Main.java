@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sma.engine.Engine;
 
 public class Main extends Application {
 
@@ -16,6 +17,8 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+		Engine inference = new Engine();
+		inference.chainageArriere();
     }
 
 
