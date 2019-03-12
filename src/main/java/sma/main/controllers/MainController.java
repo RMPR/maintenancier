@@ -25,7 +25,6 @@ import sma.engine.Engine;
 public class MainController implements Initializable {
 
 	public ImageView close, minimize;
-	public TextField text;
 	public Engine engine;
 
 	private List<Label> messages = new ArrayList<>();
@@ -119,19 +118,13 @@ public class MainController implements Initializable {
 		label.setStyle("-fx-border-color: orange;");
 		label.setLayoutY(layouty2);
 		chatBox.getChildren().add(label);
-		text.clear();
+
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		container.setContent(chatBox);
 		close.setOnMouseClicked(e -> this.close());
-		text.setOnKeyReleased(e -> {
-			if (e.getCode() == KeyCode.ENTER) {
-		
-				question(text.getText());
-			}
-		});
 
 		minimize.setOnMouseClicked(e -> {
 			Stage stage = (Stage) minimize.getScene().getWindow();

@@ -3,7 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -66,6 +65,5 @@
         </content>
       </ScrollPane>
       <Line endX="830.0" endY="100.0" layoutX="38.0" layoutY="312.0" opacity="0.19" rotate="90.0" startX="100.0" startY="100.0" stroke="#cd7676" strokeWidth="10.0" />
-      <TextField fx:id="text" layoutX="39.0" layoutY="662.0" promptText="Enter a question" />
    </children>
 </AnchorPane>
